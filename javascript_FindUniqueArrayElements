@@ -1,0 +1,40 @@
+/***************Method 1********************/
+
+let str = 'character';
+
+let uniqueChars = [];
+
+for (let i = 0; i < str.length; i++) {
+  if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
+    uniqueChars.push(str[i]);
+  }
+}
+
+console.log(uniqueChars); // Output: ['h', 'a', 't', 'e']
+/*****************end***************************
+
+
+/******************Method 2************************/
+function firstNonRepeatingLetter(s){
+  // let result = [];
+  
+  let word = s.toLowerCase().split('');
+  
+let getstr = word.map(function(item){
+  //  return getstr;
+    // console.log(item);
+    if(word.indexOf(item) === word.lastIndexOf(item)){
+      return item;
+      // console.log(item);
+      // return getstr;
+    }
+    
+});
+
+// getstr = getstr.filter(item => item !== undefined);
+
+console.log(getstr);
+}
+
+firstNonRepeatingLetter('strtrESSd');
+/********************End****************/
